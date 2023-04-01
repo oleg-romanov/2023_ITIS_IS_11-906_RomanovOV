@@ -1,23 +1,8 @@
-1.txt -> https://gamedev.ru/code/articles/
-2.txt -> https://gamedev.ru/articles/
-3.txt -> https://gamedev.ru/art/articles/
-4.txt -> https://gamedev.ru/gamedesign/articles/
-5.txt -> https://gamedev.ru/industry/articles/
-6.txt -> https://gamedev.ru/tip/
-7.txt -> https://gamedev.ru/pages/
-8.txt -> https://gamedev.ru/
-9.txt -> https://gamedev.ru/pubs
-10.txt -> https://gamedev.ru/code/
-11.txt -> https://gamedev.ru/code/articles/?page=2
-12.txt -> https://gamedev.ru/code/articles/?page=3
-13.txt -> https://gamedev.ru/code/articles/?page=4
-14.txt -> https://gamedev.ru/code/articles/?page=5
 1.txt -> https://www.mk.ru
 2.txt -> https://www.sportmk.ru/
 3.txt -> https://ohotniki.ru
 4.txt -> https://womanhit.ru
 5.txt -> https://www.mk.ru/stories/vstrechaem-vesnu-bezopasnye-sposoby-probuzhdeniya-organizma/?utm_source=mk&utm_medium=shapka&utm_campaign=vesnu
-
 6.txt -> https://www.mk.ru/daily/newspaper/
 7.txt -> https://www.mk.ru/subscription/
 8.txt -> https://www.mk.ru/news/
