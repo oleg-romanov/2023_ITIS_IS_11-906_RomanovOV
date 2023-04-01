@@ -30,7 +30,7 @@ def letters(text):
 
 def lemmatize(words, tokenized_map):
     for word in words:
-        if pos(word) not in functors_pos:
+        if part_of_speech(word) not in functors_pos:
             p = morph.parse(word)[0].normal_form
             array = tokenized_map.get(p)
             if array is None:
