@@ -6,6 +6,7 @@ sites = [
     'https://www.mk.ru'
 ]
 links = []
+
 for i in sites:
     if not links.__contains__(i):
         links.append(i)
@@ -21,23 +22,23 @@ while count < 100:
         if not links[i].__contains__('http'):
             i += 1
             continue
-        current_site = links[i]
+        current_website = links[i]
         i += 1
     else:
         break
 
     try:
-        r = requests.get(current_site)
+        request = requests.get(current_website)
     except:
-        print(f'Ошибка при запросе на сайт: {current_site}')
+        print(f'Error: {current_website}')
         continue
 
-    soup = BeautifulSoup(r.text, 'lxml')
+    soup = BeautifulSoup(request.text, 'lxml')
     text = soup.get_text()
 
     lines = (line.strip() for line in text.splitlines())
-    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-    text = '\n'.join(chunk for chunk in chunks if chunk)
+    parts = (phrase.strip() for line in lines for phrase in line.split("  "))
+    text = '\n'.join(chunk for chunk in parts if chunk)
 
     num_words = len(text.split())
 
@@ -46,11 +47,12 @@ while count < 100:
     for a in all_a:
         if not links.__contains__(a.get('href')):
             links.append(a.get('href'))
+
     if num_words >= 1000:
         count += 1
         with open(f"texts/{count}.txt", "w", encoding="utf-8") as myfile:
             myfile.write(text)
             myfile.close()
         with open(fr"index.txt", "a") as myfile:
-            myfile.write(f"{count}.txt -> {current_site}\n")
+            myfile.write(f"{count}.txt -> {current_website}\n")
     print(count)
